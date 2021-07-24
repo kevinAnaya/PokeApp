@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.bd-navbar {
+    padding: .75rem 0;
+    background-color: #7952b3;
+}
+
+.col-md-auto{
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.p-2{
+    padding: .5rem!important;
+}
+
+.btn-bd-download {
+    font-weight: 600;
+    color: #ffe484;
+    border-color: #ffe484;
+}
+
+
+
+.navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+

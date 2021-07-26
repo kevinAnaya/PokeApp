@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
   ],
   imports: [
     CommonModule,
-    PokemonRoutingModule
+    PokemonRoutingModule,
+    FormsModule
   ]
 })
 export class PokemonModule { }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PokemonService } from '../../services/pokemon.service';
+
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-buscar',
@@ -6,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class BuscarComponent implements OnInit {
+export class BuscarComponent {
 
-  constructor() { }
+  termino: string = '';
 
-  ngOnInit(): void {
+  pokemon: any = {}
+
+  constructor( private pokemonService: PokemonService) { }
+
+  buscar(){
+    this.pokemonService.getPokemon(this.termino)
+        .subscribe( resp => {
+          this.pokemon = resp
+        })
   }
 
 }

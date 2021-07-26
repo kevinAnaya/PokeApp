@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -14,7 +15,8 @@ import { NabvarComponent } from './components/nabvar/nabvar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

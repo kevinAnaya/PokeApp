@@ -1,3 +1,47 @@
 <div class="top-30">
-    <p>buscar works!</p>
+    <div class="container">
+        
+        <div class="row">
+
+            <div class="col-md-3">
+                <h1>Buscar</h1>
+                <hr>
+
+                <input type="search" 
+                       class="form-control ds-input" 
+                       placeholder="Buscar pokemon..." 
+                       autocomplete="off"
+                       style="position: relative; vertical-align: top;"
+                       [(ngModel)]="termino">
+                
+                <button class="mt-2 btn btn-primary float-end"
+                        (click)="buscar()">
+                    Buscar
+                </button>
+
+            </div>
+
+            <div class="col-md-9">
+
+                <h1>{{termino}}</h1>
+                <hr *ngIf="termino">
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" [src]="pokemon.sprites.other.dream_world.front_default" >
+                    </div>
+                    <div class="col-md-8">
+                        <h3>{{ pokemon.name }}</h3>
+                        <h3>tipo: {{ pokemon.types[0].type.name }}</h3>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
 </div>
